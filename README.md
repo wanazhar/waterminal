@@ -1,7 +1,6 @@
-```markdown
 # waterminal finance suite 🚀
 
-A comprehensive financial analysis toolkit for terminal enthusiasts. 💹
+A work-in-progress comprehensive financial analysis toolkit for terminal enthusiasts. 💹
 
 ## Installation 🛠️
 
