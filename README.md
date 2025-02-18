@@ -1,4 +1,4 @@
-# waterminal finance suite 🚀
+# waterminal financial suite 🚀
 
 A work-in-progress comprehensive financial analysis toolkit for terminal enthusiasts. 💹
 
