@@ -1,6 +1,6 @@
 # waterminal financial suite 🚀
 
-A work-in-progress comprehensive financial analysis toolkit for terminal enthusiasts. 💹
+A work-in-progress comprehensive financial analysis toolkit for terminal enthusiasts. This project is strictly for educational purpose only. 💹
 
 ## Installation 🛠️
 
@@ -35,16 +35,21 @@ python main.py
 
 ## Module Structure 🗂️
 
-```
-waterminal/
-├── main.py
-├── ai/
-├── data_sources/
-├── financials/
-├── market/
-├── options/
-├── technical/
-└── utilities/
+```mermaid
+flowchart TD
+    A[waterminal] --> B[main.py]
+    A --> C[ai]
+    A --> D[data_sources]
+    A --> E[financials]
+    A --> F[market]
+    A --> G[options]
+    A --> H[technical]
+    A --> I[utilities]
+    A --> J[backtesting]
+    A --> K[news]
+    A --> L[macro]
+    A --> M[portfolio]
+    A --> N[hedge_funds]
 ```
 
 ## API Keys Required 🔑
@@ -67,60 +72,94 @@ waterminal/
 - Create a feature branch. 🌱
 - Submit a PR with a detailed description. 🚀
 
-## Final Implementation Steps 🏁
+## Beginner's Guide 📚
 
-1. **Create remaining files:**
+### Getting Started
 
-```
-waterminal/
-├── options/
-│   └── chain.py
-├── macro/
-│   └── fred.py
-├── backtesting/
-│   └── engine.py
-└── utilities/
-    └── setup_wizard.py
-```
+1. **Clone the Repository**: Start by cloning the repository to your local machine.
+   ```bash
+   git clone https://github.com/wanazhar/waterminal.git
+   ```
 
-2. **Install final dependencies:**
+2. **Set Up the Environment**: Navigate into the project directory and set up a virtual environment.
+   ```bash
+   cd waterminal
+   python -m venv .venv
+   source .venv/bin/activate  # For Windows use .venv\Scripts\activate
+   ```
 
+3. **Install Dependencies**: Install the necessary Python packages.
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Configure API Keys**: Ensure you have all required API keys set up in a `.env` file in the root directory.
+   ```
+   ALPHA_VANTAGE_KEY=your_alpha_vantage_key
+   OPENROUTER_KEY=your_openrouter_key
+   FRED_KEY=your_fred_key
+   EODHD_KEY=your_eodhd_key
+   ```
+
+5. **Run the Setup Wizard**: Execute the setup wizard to complete initial configuration.
+   ```bash
+   python -m utilities.setup_wizard
+   ```
+
+6. **Launch the Application**: Start the application using the main entry point.
+   ```bash
+   python main.py
+   ```
+
+### Understanding the Interface
+
+- **Main Menu**: Navigate through various financial tools and analyses.
+- **AI Assistant**: Interact with the AI-powered assistant for financial insights.
+- **Portfolio Management**: Track and analyze your investment portfolio.
+
+### Troubleshooting
+
+- **Common Issues**: Refer to the `logs/` directory for error logs if you encounter any issues.
+- **Support**: Reach out via the project's GitHub issues page for help.
+
+### Learning Resources
+
+- **Python Basics**: Familiarize yourself with Python programming.
+- **Financial Markets**: Gain a basic understanding of financial markets and instruments.
+- **Rich Library**: Explore the Rich library for creating beautiful terminal applications.
+
+---
+
+This guide aims to help beginners set up and explore the Waterminal project effectively. For more detailed information, refer to the module-specific documentation within the codebase.
+
+## Step-by-Step Tutorial 🧑🏫
+
+### Basic Usage Walkthrough
 ```bash
-pip install fredapi yfinance pandas-ta
+# Start the application
+python main.py
+
+# Example workflow:
+1. Select 'Core Features' → 'Live Market Data'
+2. Enter ticker symbols: AAPL,MSFT
+3. View real-time price updates
+4. Press Q to return to main menu
+5. Select 'AI Assistant' for market insights
 ```
 
-3. **Update menu configuration:**
-
+### Advanced Analysis Example
 ```python
-# config/menu_config.py
-MENU_STRUCTURE.append({
-    'id': 4,
-    'label': 'Derivatives Analysis',
-    'children': [
-        {'id': 41, 'label': 'Options Chain', 'module': 'options.chain'},
-        {'id': 42, 'label': 'Futures Data', 'module': 'market.futures'}
-    ]
-})
+from portfolio.manager import PortfolioManager
+
+pm = PortfolioManager()
+pm.add_position('AAPL', 100, 150.25)
+print(pm.performance_report())
 ```
 
-## System Architecture Overview 🏗️
+### Troubleshooting Guide
+| Symptom | Solution |
+|---------|----------|
+| Missing API Keys | Run `python -m utilities.setup_wizard` |
+| Data Loading Issues | Check `config/data_sources.json` |
+| Module Not Found | Verify `requirements.txt` installation |
 
-```mermaid
-graph TD
-    A[Main Menu] --> B[Market Data]
-    A --> C[Financial Analysis]
-    A --> D[AI Assistant]
-    A --> E[Portfolio]
-    A --> F[Options]
-    B --> G[Real-time]
-    B --> H[Historical]
-    C --> I[Ratios]
-    C --> J[Valuation]
-    D --> K[Research]
-    D --> L[Analysis]
-    E --> M[Backtesting]
-    E --> N[Optimization]
-    F --> O[Chain Analysis]
-    F --> P[Greeks]
-```
-```

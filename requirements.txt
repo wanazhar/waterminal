@@ -1,0 +1,17 @@
+aiohttp
+asyncio
+pandas
+rich
+openrouter
+newsapi
+textblob
+fredapi
+yfinance
+pandas-ta
+questionary
+sec-edgar-downloader
+xmltodict
+diskcache
+python-dotenv
+sqlite3
+mermaid-js
